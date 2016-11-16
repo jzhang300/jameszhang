@@ -1,0 +1,293 @@
+.timeline {
+
+  $timeline-color: get('red');
+  $timeline-line-width: 4px;
+  $timeline-padding: get('rhythm') / 1.5;
+  $post-margin-from-line: 4%;
+  $post-arrow-width: 0.5rem;
+  $post-arrow-color: get('warm gray 2');
+  $post-dot-border-width: 0.3rem;
+  $post-dot-width: 1.25rem;
+  $post-dot-color: $timeline-color;
+  $post-color: color('white', 10);
+  $post-arrow-position: get('rhythm');
+  $background-color: color('white', 20);
+
+  &--line {
+    position: absolute;
+    top: 0rem;
+    margin-top: 0rem;
+    border-left: $timeline-line-width solid $timeline-color;
+    height: calc(100% + #{get('rhythm') / 2});
+
+    .timeline--end-of-line & {
+      height: 3rem;
+      top: -3rem;
+    }
+
+    .timeline--beginning-of-line & {
+      margin-top: -8rem;
+      height: 11rem;
+    }
+
+    @include breakpoint(get('small')) {
+      width: calc(50% + #{$timeline-line-width / 2});
+      border-left: none;
+      border-right: $timeline-line-width solid $timeline-color;
+      height: 3rem;
+      z-index: get('z-time-line');
+      height: calc(100% + 3rem);
+    }
+  }
+
+  &--row {
+    display: block;
+    position: relative;
+
+    @include breakpoint(get('small')) {
+      text-align: center;
+    }
+  }
+  &--tag {
+    position: relative;
+    display: inline-block;
+    background-color: $timeline-color;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding: get('rhythm') / 8 get('rhythm') / 4;
+    color: white;
+    z-index: get('z-time-posts');
+
+    @include breakpoint(get('small')) {
+      margin-left: 0rem;
+      margin-bottom: 0rem;
+      margin-top: 0rem;
+    }
+  }
+
+  &--posts {
+
+  }
+
+  &--post {
+
+    z-index: get('z-time-posts');
+    width: calc(100% - #{get('rhythm')});
+    text-align: left;
+    background-color: $post-color;
+    position: relative;
+    transition: 0.15s;
+
+    @include breakpoint(get('small')) {
+      width: #{50% - $post-margin-from-line};
+    }
+
+    &.hidden {
+      visibility: hidden;
+      opacity: hidden;
+      transform: scale(0);
+    }
+
+    &:before {
+      position: absolute;
+      border: $post-dot-border-width solid $background-color;
+      width: $post-dot-width;
+      height: $post-dot-width;
+      border-radius: 50%;
+      background-color: $post-dot-color;
+      top: #{$post-arrow-position - $post-arrow-width / 2};
+      z-index: get('z-time-posts');
+    }
+
+    &:after {
+      position: absolute;
+      border: $post-arrow-width solid transparent;
+      top: $post-arrow-position;
+    }
+
+    // left posts
+    &:nth-of-type(odd) {
+      float: right;
+      transform-origin: top right;
+      clear: both;
+
+      &:before {
+        left: #{-$post-dot-width - ($post-arrow-width * 2) - 0.25rem};
+      }
+
+      &:after {
+        border-right-color: $post-arrow-color;
+        left: -1rem;
+      }
+
+      @include breakpoint(get('small')) {
+        float: left;
+
+        &:before {
+          left: initial;
+          right: calc(#{-$post-dot-width / 2 - 0.2rem} - #{$post-margin-from-line * 2});
+        }
+
+        &:after {
+          border-right-color: transparent;
+          border-left-color: $post-arrow-color;
+          left: initial;
+          right: -1rem;
+        }
+      }
+    }
+
+    // right posts
+    &:nth-of-type(even) {
+      float: right;
+      transform-origin: top left;
+      margin-top: 3rem;
+
+      &:before {
+        left: #{-$post-dot-width - ($post-arrow-width * 2) - 0.25rem};
+      }
+
+      &:after {
+        border-right-color: $post-arrow-color;
+        left: -1rem;
+      }
+
+      @include breakpoint(get('small')) {
+        &:before {
+          left: calc(#{-$post-dot-width / 2 - 0.09rem} - #{$post-margin-from-line * 2});
+        }
+
+        &:after {
+          border-right-color: $post-arrow-color;
+          left: -1rem;
+        }
+      }
+    }
+
+    &_large {
+
+      &:nth-of-type(even):before,
+      &:nth-of-type(odd):before,
+      &:before {
+        left: #{-$post-dot-width - ($post-arrow-width * 2) - 0.25rem};
+      }
+
+      &:nth-of-type(even):after,
+      &:nth-of-type(odd):after,
+      &:after {
+        border-right-color: $post-arrow-color;
+        left: -1rem;
+      }
+
+      @include breakpoint(get('small')) {
+        clear: both;
+        width: 100%;
+        margin-top: get('rhythm') * 1.5;
+        margin-bottom: get('rhythm') * 1.5;
+        border-bottom: 0.2rem solid white;
+
+        &:nth-of-type(even):before,
+        &:nth-of-type(odd):before,
+        &:before {
+          left: calc(50% - #{$post-dot-width / 2});
+          top: calc(#{- $post-dot-width / 2} - 1.5rem);
+        }
+
+        &:nth-of-type(even):after,
+        &:nth-of-type(odd):after,
+        &:after {
+          border: $post-arrow-width solid transparent;
+          border-bottom-color: $post-arrow-color;
+          top: -1rem;
+          right: initial;
+          left: calc(50% - #{$post-arrow-width});
+        }
+      }
+    }
+
+    @include breakpoint(get('small')) {}
+  }
+
+  &--post-image-container {
+    padding: $timeline-padding;
+    background-color: get('warm gray');
+  }
+
+  &--post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #bfbfbf;
+  }
+
+  &--post-content {
+    padding: $timeline-padding;
+    background-color: get('white');
+    margin-top: 0rem;
+  }
+
+  &--post-date {
+    font-size: 1.125em;
+    font-family: get('sans serif');
+    color: get('warm gray 3');
+  }
+
+  &--post-header {
+    font-family: get('sans serif');
+    font-weight: 600;
+    color: get('red');
+  }
+
+  &--post-description {
+    font-family: get('serif');
+    font-size: 1.125em;
+    margin-bottom: get('rhythm') / 2;
+    color: get('gray');
+  }
+
+  &--read-more {
+    font-family: get('sans serif');
+    font-size: 1.125em;
+    font-weight: 400;
+    color: get('warm gray 3');
+
+    &:visited {
+      color: get('warm gray 3');
+    }
+
+    &:focus,
+    &:hover {
+      color: darken(color('yellow', 10), 20%);
+    }
+  }
+
+  &--end-of-line {
+    margin-top: get('rhythm');
+    margin-bottom: #{get('rhythm') * 3};
+  }
+  &--end-of-line-point {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: $timeline-color;
+    display: inline-block;
+    margin-top: 0rem;
+    position: absolute;
+    top: 0rem;
+    left: calc(-0.5rem + #{$timeline-line-width / 2});
+
+    @include breakpoint(get('small')) {
+      left: calc(50% - 0.5rem);
+    }
+  }
+  &--end-of-line-text {
+    position: absolute;
+    top: 1.5rem;
+    left: 0%;
+    right: 0%;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0rem;
+  }
+}

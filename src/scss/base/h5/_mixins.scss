@@ -1,0 +1,5 @@
+@mixin base--h5 {
+  font-size: ms(0);
+  font-weight: get('weight normal');
+  font-family: get('headers font');
+}

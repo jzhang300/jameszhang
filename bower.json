@@ -1,0 +1,21 @@
+{
+  "name": "james zhang blog",
+  "description": "A Node Express blog site",
+  "main": "app.js",
+  "authors": [
+    "James Zhang <james.zhang75024@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "Express"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

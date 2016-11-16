@@ -1,0 +1,15 @@
+$ColorScheme: (
+  'primary color': color('blue', 10),
+  'secondary color': color('orange', 10),
+  'background color': color('white', 10),
+  'text color': #333,
+  'white': #fff,
+  'black': #000,
+  'red': #FF585C,
+  'warm gray': #E5E5E5,
+  'warm gray 2': #DFDEDA,
+  'warm gray 3': #999999,
+  'gray': #484848
+);
+
+$GlobalSettings: map-merge($GlobalSettings, $ColorScheme);

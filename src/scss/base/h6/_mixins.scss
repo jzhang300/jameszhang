@@ -1,0 +1,5 @@
+@mixin base--h6 {
+  font-size: ms(-1);
+  font-weight: get('weight normal');
+  font-family: get('headers font');
+}

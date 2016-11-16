@@ -1,0 +1,6 @@
+$ZIndices: (
+  'z-time-line': 0,
+  'z-time-posts': 1000
+);
+
+$GlobalSettings: map-merge($GlobalSettings, $ZIndices);

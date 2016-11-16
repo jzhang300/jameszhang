@@ -1,0 +1,139 @@
+$sun-breakpoint-small: 700px;
+$sun-breakpoint-large: 1060px;
+
+.top-nav {
+  // @include grid(4);
+  height: 100%;
+  margin-top: 0rem;
+  background-color: darken(color('turquoise', 10), 0%);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+
+  &--description {
+
+  }
+
+  &--nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+  }
+
+  &--li {
+    display: inline-block;
+    margin-top: 0rem;
+    margin-right: get('rhythm');
+  }
+
+  &--a {
+    color: white;
+    font-family: get('sans serif');
+    font-weight: 400;
+  }
+}
+
+.hero {
+  margin-top: 0rem;
+  background-color: color('blue', 10);
+  height: 30rem;
+
+  ._container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &--box {
+    text-align: center;
+    margin-bottom: get('rhythm') * 3.5;
+    z-index: 1000;
+    color: white;
+  }
+
+  &--name {
+    margin-bottom: get('rhythm') / 2;
+    font-family: get('calligraphic');
+    font-size: ms(10);
+  }
+
+  &--role {
+    margin-top: 0rem;
+    background-color: color('blue', 10);
+  }
+
+  &--text {
+    background-color: color('blue', 10);
+  }
+}
+
+.blog {
+  margin-top: 0rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: color('white', 20);
+
+  &--sun-positioning {
+    position: relative;
+    margin-bottom: 5rem;
+
+    @include breakpoint($sun-breakpoint-small) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--sun-container {
+
+    display: none;
+
+    @include breakpoint(get('small')) {
+      display: block;
+      margin: -15.8rem auto 0rem;
+      width: 40rem;
+      position: absolute;
+      left: -9999px;
+      right: -9999px;
+      z-index: get('z-time-posts');
+    }
+
+    @include breakpoint($sun-breakpoint-small) {
+      margin: -39.5% auto 0rem;
+      width: auto;
+      position: static;
+    }
+
+    @include breakpoint($sun-breakpoint-large) {
+      max-width: 64rem;
+      margin-top: -25.2rem;
+    }
+  }
+
+  &--sun-small {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: get('red');
+    margin-top: 0rem;
+    position: absolute;
+    top: -4.5rem;
+    left: -4.5rem;
+    z-index: 1000;
+
+    @include breakpoint(get('small')) {
+      display: none;
+    }
+  }
+
+  &--sun {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.main {
+  // @include grid(8, $has-right-gutter: false, $push-left: 4);
+  margin-top: 0rem;
+}

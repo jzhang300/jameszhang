@@ -1,0 +1,19 @@
+@mixin base--a($color: null, $background: null) {
+
+  // @include smart-underline($position: 100%, $text: color('turquoise', 10));
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color('yellow', 10);
+  transition: 0.2s;
+
+  &:visited {
+    // @include smart-underline($position: 100%, $text: color('turquoise', 20));
+    color: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    // @include smart-underline($position: 100%, $text: color('gray', 20));
+    color: darken(color('yellow', 10), 20%);
+  }
+}

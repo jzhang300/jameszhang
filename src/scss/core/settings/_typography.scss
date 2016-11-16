@@ -1,0 +1,18 @@
+$serif-font: ('ff-tisa-web-pro', Georgia, Utopia, Charter, serif);
+$sans-serif-font: ('Source Sans pro', Verdana Pro, sans-serif);
+$calligraphic-font: ('selima');
+
+$TypographySettings: (
+  'serif': $serif-font,
+  'sans serif': $sans-serif-font,
+  'calligraphic': $calligraphic-font,
+  'headers font': $sans-serif-font,
+  'text font': $serif-font,
+  'monospace': ('Courier New', 'Lucida Console', monospace),
+  'weight bold': 700,
+  'weight normal': 400,
+  'weight light': 200,
+  'rhythm': 2rem
+);
+
+$GlobalSettings: map-merge($GlobalSettings, $TypographySettings);
