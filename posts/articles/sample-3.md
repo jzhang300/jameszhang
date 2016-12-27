@@ -1,9 +1,9 @@
-title: Sample page
-description: The majority of websites are composed of a bright, usually white background and dark text.
+title: Sample page 3
+description: The majority of websites are composed of a bright, usually white background and dark text
 view: custom
-date: 2014-04-08
+date: 2016-04-09
 ---
-# Sample Text: The Best Color Scheme for Your Website
+# Sample Text: Blah Blah blah
 
 #### The majority of websites are composed of a bright, usually white background and dark text. Then there's the small minority of the web: dark websites, colorful websites. Why is the bright background used by the majority of websites?
 

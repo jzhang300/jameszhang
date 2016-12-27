@@ -20,7 +20,7 @@ gulp.task('scripts', function() {
     .pipe(plumber({
       errorHandler: onError
     }))
-    .pipe(concat('demo.js'))
+    // .pipe(concat('main.js'))
     .pipe(gulp.dest(destPath));
 });
 

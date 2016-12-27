@@ -24,7 +24,7 @@ module.exports = {
     src: src,
     src_styles: src + '/scss',
     src_icons: src + '/icons',
-    src_scripts: src + '/js',
+    src_scripts: dest + '/js',
     dest: dest,
     dest_styles: dest + '/css',
     dest_fonts: dest + '/fonts',

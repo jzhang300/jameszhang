@@ -110,9 +110,11 @@ function getPages(req, res, next, directoryPath) {
             if (err)
               reject(err);
             else {
+              console.log(result);
               resolve({
                 uriPath: filename.replace('.md', ''),
-                meta: result.meta
+                meta: result.meta,
+                content: result.rawContent
               });
             }
           })
