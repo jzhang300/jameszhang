@@ -880,7 +880,8 @@ p,
   background-color: #FFFFFF;
   position: relative;
   -webkit-transition: 0.15s;
-  transition: 0.15s; }
+  transition: 0.15s;
+  visibility: visible; }
   @media (min-width: 640px) {
     .timeline--post {
       width: 46%; } }
@@ -906,6 +907,8 @@ p,
     float: right;
     -webkit-transform-origin: top right;
             transform-origin: top right;
+    -webkit-transform-origin: 108% 1.75rem;
+            transform-origin: 108% 1.75rem;
     clear: both; }
     .timeline--post:nth-of-type(odd):before {
       left: -2.5rem; }
@@ -927,6 +930,8 @@ p,
     float: right;
     -webkit-transform-origin: top left;
             transform-origin: top left;
+    -webkit-transform-origin: -8% 1.75rem;
+            transform-origin: -8% 1.75rem;
     margin-top: 3rem; }
     .timeline--post:nth-of-type(even):before {
       left: -2.5rem; }
@@ -951,6 +956,9 @@ p,
       margin-top: 3rem;
       margin-bottom: 3rem;
       border-bottom: 0.2rem solid white; }
+      .timeline--post_large:nth-of-type(even), .timeline--post_large:nth-of-type(odd) {
+        -webkit-transform-origin: top center;
+                transform-origin: top center; }
       .timeline--post_large:nth-of-type(even):before, .timeline--post_large:nth-of-type(odd):before, .timeline--post_large:before {
         left: calc(50% - 0.625rem);
         top: calc(-0.625rem - 1.5rem); }
@@ -960,6 +968,10 @@ p,
         top: -1rem;
         right: initial;
         left: calc(50% - 0.5rem); } }
+  .timeline--post_hidden {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    visibility: hidden; }
 
 .timeline--post-image-container {
   padding: 1.33333rem;

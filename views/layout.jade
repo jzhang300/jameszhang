@@ -38,7 +38,7 @@ html(lang="en-AU")
 				<% } %>
 				<% if (key === 0) { %>
 					<div class="timeline--row">
-						<div class="timeline--post timeline--post_large">
+						<div class="timeline--post timeline--post_large timeline--post_hidden">
 							<div class="timeline--post-image-container">
 								<img class="timeline--post-image" src="images/sample-image.jpg" alt="">
 							</div>
@@ -57,7 +57,7 @@ html(lang="en-AU")
 				<div class="timeline--row timeline--posts">
 					<% _.each(items[key].posts, function(post, postKey, postList) { %>
 						<% if (!(key === 0 && postKey === 0)) { %>
-							<div class="timeline--post">
+							<div class="timeline--post timeline--post_hidden">
 								<div class="timeline--post-image-container">
 								  <img class="timeline--post-image" src="images/sample-image.jpg" alt="">
 								</div>

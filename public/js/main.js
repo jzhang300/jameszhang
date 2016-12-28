@@ -11,6 +11,7 @@ $.when(
   $.ajax('/pages/articles')
 ).done(function(articles) {
   $timeline = $('.timeline');
+
   // 1. remove dateless posts
   var sortedArticles = articles.filter(function(item) {
     return item.meta.hasOwnProperty('date');
@@ -66,4 +67,12 @@ $.when(
   */
 
   dataBind($timeline, timeline_template, sortedArticles);
+
+  $(window).scroll(function() {
+    $('.timeline--post').each(function() {
+      if (this.getBoundingClientRect().top < 400 && this.getBoundingClientRect().top > -200) {
+        $(this).removeClass('timeline--post_hidden');
+      }
+    });
+  });
 });
