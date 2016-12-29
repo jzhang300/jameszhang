@@ -74,5 +74,10 @@ $.when(
         $(this).removeClass('timeline--post_hidden');
       }
     });
+    $('.timeline--tag').each(function() {
+      if (this.getBoundingClientRect().top < 400 && this.getBoundingClientRect().top > -200) {
+        $(this).removeClass('timeline--tag_hidden');
+      }
+    });
   });
 });

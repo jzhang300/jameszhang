@@ -58,11 +58,21 @@
     padding: get('rhythm') / 8 get('rhythm') / 4;
     color: white;
     z-index: get('z-time-posts');
+    transform: scale(1);
+    transform-origin: left center;
+    visibility: visible;
+    transition: 0.2s;
 
     @include breakpoint(get('small')) {
       margin-left: 0rem;
       margin-bottom: 0rem;
       margin-top: 0rem;
+      transform-origin: center center;
+    }
+
+    &_hidden {
+      transform: scale(0);
+      visibility: hidden;
     }
   }
 
@@ -76,9 +86,12 @@
     position: relative;
     transition: 0.15s;
     visibility: visible;
+    transform-origin: #{0% - $post-margin-from-line * 2} #{$post-arrow-position - $post-arrow-width / 2};
+    margin-bottom: 3rem;
 
     @include breakpoint(get('small')) {
       width: #{50% - $post-margin-from-line};
+      margin-bottom: 0rem;
     }
 
     &.hidden {
@@ -107,8 +120,7 @@
     // left posts
     &:nth-of-type(odd) {
       float: right;
-      transform-origin: top right;
-      transform-origin: #{100% + $post-margin-from-line * 2} #{$post-arrow-position - $post-arrow-width / 2};
+      transform-origin: #{0% - $post-margin-from-line * 2} #{$post-arrow-position - $post-arrow-width / 2};
       clear: both;
 
       &:before {
@@ -122,6 +134,7 @@
 
       @include breakpoint(get('small')) {
         float: left;
+        transform-origin: #{100% + $post-margin-from-line * 2} #{$post-arrow-position - $post-arrow-width / 2};
 
         &:before {
           left: initial;
@@ -140,9 +153,7 @@
     // right posts
     &:nth-of-type(even) {
       float: right;
-      transform-origin: top left;
       transform-origin: #{0% - $post-margin-from-line * 2} #{$post-arrow-position - $post-arrow-width / 2};
-      margin-top: 3rem;
 
       &:before {
         left: #{-$post-dot-width - ($post-arrow-width * 2) - 0.25rem};
@@ -154,6 +165,8 @@
       }
 
       @include breakpoint(get('small')) {
+        margin-top: 3rem;
+
         &:before {
           left: calc(#{-$post-dot-width / 2 - 0.09rem} - #{$post-margin-from-line * 2});
         }
@@ -166,6 +179,8 @@
     }
 
     &_large {
+      transform-origin: #{0% - $post-margin-from-line * 2} #{$post-arrow-position - $post-arrow-width / 2};
+
       &:nth-of-type(even):before,
       &:nth-of-type(odd):before,
       &:before {

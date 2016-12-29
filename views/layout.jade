@@ -32,7 +32,7 @@ html(lang="en-AU")
 			<% _.each(items, function(item, key, list) { %>
 				<% if (key > 0) { %>
 					<div class="timeline--row">
-						<div class="timeline--tag"><%= item.year %></div>
+						<div class="timeline--tag timeline--tag_hidden"><%= item.year %></div>
 						<div class="timeline--line"></div>
 					</div>
 				<% } %>

@@ -1,0 +1,43 @@
+.footer {
+  background-color: get('gray');
+  color: get('warm gray 2');
+  font-family: get('sans serif');
+  font-weight: 500;
+  margin-top: 0rem;
+  padding: 2rem 0rem;
+
+  &--social-icons {
+    text-align: center;
+  }
+
+  &--icon-container {
+    display: inline-block;
+    margin-top: 0rem;
+
+    .icon {
+      font-size: 4rem;
+      line-height: 1;
+    }
+  }
+
+  &--icon-link {
+    color: get('warm gray 2');
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:visited {
+      color: get('warm gray 2');
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: color('white', 10);
+    }
+  }
+
+  &--text {
+    text-align: center;
+    margin-top: 0.75rem;
+  }
+}
