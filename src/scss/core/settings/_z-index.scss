@@ -1,6 +1,10 @@
+// X000 = layout level z index
+//  X00 = component level z index
+
 $ZIndices: (
+  'z-top-nav': 9000,
+  'z-time-posts': 1000,
   'z-time-line': 0,
-  'z-time-posts': 1000
 );
 
 $GlobalSettings: map-merge($GlobalSettings, $ZIndices);

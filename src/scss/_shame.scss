@@ -2,17 +2,15 @@ $sun-breakpoint-small: 700px;
 $sun-breakpoint-large: 1060px;
 
 .top-nav {
-  // @include grid(4);
-  height: 100%;
   margin-top: 0rem;
   background-color: darken(color('turquoise', 10), 0%);
   height: 4rem;
   display: flex;
   align-items: center;
-
-  &--description {
-
-  }
+  z-index: get('z-top-nav');
+  position: fixed;
+  top: 0rem;
+  width: 100%;
 
   &--nav {
     display: flex;
@@ -31,6 +29,12 @@ $sun-breakpoint-large: 1060px;
     color: white;
     font-family: get('sans serif');
     font-weight: 400;
+    border-bottom: 2px solid color('yellow', 10);
+    padding-bottom: 0.1em;
+
+    &:hover {
+      color: color('yellow', 10);
+    }
   }
 }
 
@@ -62,6 +66,7 @@ $sun-breakpoint-large: 1060px;
   &--role {
     margin-top: 0rem;
     background-color: color('blue', 10);
+    font-weight: 600;
   }
 
   &--text {
@@ -130,6 +135,7 @@ $sun-breakpoint-large: 1060px;
   &--sun {
     width: 100%;
     height: auto;
+    user-select: none;
   }
 }
 
