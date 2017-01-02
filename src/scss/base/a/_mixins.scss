@@ -5,7 +5,6 @@
   text-decoration: none;
   border-bottom: 2px solid color('yellow', 10);
   transition: 0.2s;
-  padding-bottom: 0.1em;
 
   &:visited {
     // @include smart-underline($position: 100%, $text: color('turquoise', 20));

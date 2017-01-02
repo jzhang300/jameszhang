@@ -22,7 +22,7 @@ code,
 .base--pre, pre code,
 .base--pre code, pre .base--code,
 .base--pre .base--code {
-  font-family: "Inconsolata", Monaco, Consolas, "Courier New", Courier; }
+  font-family: source-code-pro, "Inconsolata", Monaco, Consolas, "Courier New", Courier; }
 
 article:before,
 .base--article:before, header:before,
@@ -557,8 +557,7 @@ a,
   text-decoration: none;
   border-bottom: 2px solid #EDD167;
   -webkit-transition: 0.2s;
-  transition: 0.2s;
-  padding-bottom: 0.1em; }
+  transition: 0.2s; }
   a:hover,
   .base--a:hover, a:focus,
   .base--a:focus {
@@ -611,8 +610,7 @@ pre,
 pre,
 .base--pre {
   margin: .5em 0;
-  overflow: auto;
-  border: 1px solid rgba(127, 140, 141, 0.25); }
+  overflow: auto; }
   pre code,
   .base--pre code, pre .base--code,
   .base--pre .base--code {
@@ -878,18 +876,18 @@ pre > code,
   display: block;
   overflow-x: auto;
   padding: 1em;
-  color: #abb2bf;
-  background: #282c34; }
+  color: #626262;
+  background: #f9f9f9; }
 
 .hljs-comment,
 .hljs-quote {
-  color: #5c6370;
+  color: #95A5A6;
   font-style: italic; }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-  color: #c678dd; }
+  color: #9f69d0; }
 
 .hljs-section,
 .hljs-name,
@@ -906,11 +904,11 @@ pre > code,
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #98c379; }
+  color: #db2780; }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #e6c07b; }
+  color: #00b4a0; }
 
 .hljs-attr,
 .hljs-variable,
@@ -922,13 +920,14 @@ pre > code,
 .hljs-number {
   color: #d19a66; }
 
+.hljs-class,
 .hljs-symbol,
 .hljs-bullet,
 .hljs-link,
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #61aeee; }
+  color: #409ad5; }
 
 .hljs-emphasis {
   font-style: italic; }
@@ -938,6 +937,9 @@ pre > code,
 
 .hljs-link {
   text-decoration: underline; }
+
+.hljs-value {
+  color: #00b4a0; }
 
 .timeline--line {
   position: absolute;
@@ -1243,7 +1245,8 @@ pre > code,
   .top-nav--a {
     color: white;
     font-family: "Source Sans pro", Verdana Pro, sans-serif;
-    font-weight: 400; }
+    font-weight: 400;
+    padding-bottom: 0.1em; }
     .top-nav--a:hover {
       color: #EDD167;
       cursor: pointer; }

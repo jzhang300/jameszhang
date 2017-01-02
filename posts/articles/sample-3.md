@@ -30,3 +30,19 @@ console.log(‘pushed’);
 	color: #bada55;
 }
 ```
+
+```html
+<Tabs selected={0}>
+  <Pane label="Tab1">
+    <p className="base--p" >
+      Tab-1 content
+    </p>
+  </Pane>
+  <Pane label="Tab2">
+    <p className="base--p" >
+      Tab-2 content
+    </p>
+  </Pane>
+</Tabs>
+<!-- matched component renders here -->
+```
