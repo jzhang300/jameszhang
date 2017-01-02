@@ -46,9 +46,9 @@ $top-nav--height: 4rem;
 }
 
 .hero {
-  margin-top: 0rem;
+  margin-top: $top-nav--height;
   background-color: color('blue', 10);
-  height: 30rem;
+  height: 28rem;
 
   ._container {
     display: flex;

@@ -46,7 +46,7 @@ app.get('/pages/:directory', function(req, res, next) {
 
 app.use(markdownServe.middleware({
   rootDirectory: path.resolve(__dirname, 'posts'),
-  view: 'markdown'
+  view: 'pages/markdown'
 }));
 
 app.listen(app.get('port'), function() {
