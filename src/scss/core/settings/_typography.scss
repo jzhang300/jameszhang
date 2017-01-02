@@ -1,6 +1,7 @@
 $serif-font: ('ff-tisa-web-pro', Georgia, Utopia, Charter, serif);
 $sans-serif-font: ('Source Sans pro', Verdana Pro, sans-serif);
 $calligraphic-font: ('selima');
+$monospace-font: ('Inconsolata', Monaco, Consolas, 'Courier New', Courier);
 
 $TypographySettings: (
   'serif': $serif-font,
@@ -8,7 +9,7 @@ $TypographySettings: (
   'calligraphic': $calligraphic-font,
   'headers font': $sans-serif-font,
   'text font': $serif-font,
-  'monospace': ('Courier New', 'Lucida Console', monospace),
+  'monospace': $monospace-font,
   'weight bold': 700,
   'weight normal': 400,
   'weight light': 200,

@@ -3,12 +3,13 @@
   // @include smart-underline($position: 100%, $text: color('turquoise', 10));
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid color('yellow', 10);
+  border-bottom: 2px solid color('yellow', 10);
   transition: 0.2s;
+  padding-bottom: 0.1em;
 
   &:visited {
     // @include smart-underline($position: 100%, $text: color('turquoise', 20));
-    color: inherit;
+    // color: inherit;
   }
 
   &:hover,

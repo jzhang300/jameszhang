@@ -1,0 +1,57 @@
+script(type="text/html", id="timelineTemplate").
+  <div class="timeline--row timeline--beginning-of-line">
+    <div class="timeline--line"></div>
+  </div>
+  <% _.each(items, function(item, key, list) { %>
+    <% if (key > 0) { %>
+      <div class="timeline--row">
+        <div class="timeline--tag timeline--tag_hidden"><%= item.year %></div>
+        <div class="timeline--line"></div>
+      </div>
+    <% } %>
+    <% if (key === 0) { %>
+      <div class="timeline--row">
+        <div class="timeline--post timeline--post_large timeline--post_hidden">
+          <div class="timeline--post-image-container">
+            <img class="timeline--post-image" src="images/sample-image.jpg" alt="">
+          </div>
+          <div class="timeline--post-content">
+            <h4 class="timeline--post-header base--h4"><%= item.posts[0].title %></h4>
+            <h5 class="timeline--post-date base--h5">
+              Posted on <%= item.posts[0].date %><!-- • <a class="base--a" href="">1 Comment</a>-->
+            </h5>
+            <p class="base--p timeline--post-description"><%= item.posts[0].description %></p>
+            <a class="base--a timeline--read-more" href="<%= item.posts[0].url %>">Read More »</a>
+          </div>
+        </div>
+        <div class="timeline--line"></div>
+      </div>
+    <% } %>
+    <div class="timeline--row timeline--posts">
+      <% _.each(items[key].posts, function(post, postKey, postList) { %>
+        <% if (!(key === 0 && postKey === 0)) { %>
+          <div class="timeline--post timeline--post_hidden">
+            <div class="timeline--post-image-container">
+              <img class="timeline--post-image" src="images/sample-image.jpg" alt="">
+            </div>
+            <div class="timeline--post-content">
+              <h4 class="timeline--post-header base--h4"><%= post.title %></h4>
+              <h5 class="timeline--post-date base--h5">
+                Posted on <%= post.date %><!-- • <a class="base--a" href="">1 Comment</a>-->
+              </h5>
+              <p class="base--p timeline--post-description"><%= post.description %></p>
+              <a class="base--a timeline--read-more" href="<%= post.url %>">Read More »</a>
+            </div>
+          </div>
+        <% } %>
+      <% }); %>
+      <div class="timeline--line"></div>
+    </div>
+  <% }); %>
+  <div class="timeline--end-of-line timeline--row">
+    <div class="timeline--line"></div>
+    <div class="timeline--end-of-line-point"></div>
+    <!--<div class="timeline--end-of-line-text">
+      Beginning of time
+    </div>-->
+  </div>

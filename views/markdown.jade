@@ -1,14 +1,7 @@
-extend layout
+extend layouts/layout
 
 block content
-    .container
-        .starter-template
-            //- h1= markdownFile.meta.title
-            
-            != markdownFile.parseContent()
-
-        footer
-            hr
-            | <strong>Created:</strong> #{markdownFile.created} <br/>
-            | <strong>Last modfied:</strong> #{markdownFile.modified} <br/>
-            | <strong>Size:</strong> #{markdownFile.size} bytes
+  ._container.blog-article
+    h1.blog-article--title #{markdownFile.meta.title}
+    h5.blog-article--meta #{markdownFile.meta.date}
+    != markdownFile.parseContent()
