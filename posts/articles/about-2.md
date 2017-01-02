@@ -1,5 +1,5 @@
 title: About page
-view: custom
+view: article
 ---
 
 ## Another heading

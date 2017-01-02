@@ -304,6 +304,10 @@ video {
   max-width: 100%;
   height: auto; }
 
+html, body {
+  min-height: 100%;
+  height: 100%; }
+
 body {
   margin: 0rem;
   background: #FFFFFF;
@@ -1251,9 +1255,11 @@ pre > code,
     color: white;
     font-family: "Source Sans pro", Verdana Pro, sans-serif;
     font-weight: 400;
-    padding-bottom: 0.1em; }
-    .top-nav--a:hover {
-      color: #EDD167;
+    padding-bottom: 0.1em;
+    border-bottom-color: transparent; }
+    .top-nav--a:focus, .top-nav--a:hover {
+      color: white;
+      border-bottom-color: #EDD167;
       cursor: pointer; }
   .top-nav--logo {
     font-family: "selima";
@@ -1359,8 +1365,9 @@ pre > code,
   margin-top: 0rem; }
 
 .blog-article {
-  margin-top: 8rem;
-  margin-bottom: 4rem;
+  padding-top: calc(4rem + 3rem);
+  min-height: calc(100% - 10.8125rem);
+  padding-bottom: 3rem;
   color: #484848;
   max-width: 32rem; }
   .blog-article--meta {
@@ -1369,3 +1376,8 @@ pre > code,
     margin-bottom: 1.5rem;
     color: #95A5A6;
     margin-top: 0.5rem; }
+
+.about {
+  padding-top: calc(4rem + 3rem);
+  min-height: calc(100% - 10.8125rem);
+  padding-bottom: 3rem; }

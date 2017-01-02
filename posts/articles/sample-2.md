@@ -1,6 +1,6 @@
 title: Sample page
 description: The majority of websites are composed of a bright, usually white background and dark text
-view: custom
+view: article
 date: 2016-04-08
 ---
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).

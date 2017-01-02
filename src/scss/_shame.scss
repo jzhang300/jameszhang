@@ -1,6 +1,13 @@
 $sun-breakpoint-small: 700px;
 $sun-breakpoint-large: 1060px;
 $top-nav--height: 4rem;
+$footer--height: 10.8125rem;  // manual size of the footer--height
+
+@mixin body($padding: get('rhythm') * 1.5) {
+  padding-top: calc(#{$top-nav--height} + #{$padding});
+  min-height: calc(100% - #{$footer--height});
+  padding-bottom: $padding;
+}
 
 .top-nav {
   margin-top: 0rem;
@@ -31,9 +38,12 @@ $top-nav--height: 4rem;
     font-family: get('sans serif');
     font-weight: 400;
     padding-bottom: 0.1em;
+    border-bottom-color: transparent;
 
+    &:focus,
     &:hover {
-      color: color('yellow', 10);
+      color: white;
+      border-bottom-color: color('yellow', 10);
       cursor: pointer;
     }
   }
@@ -155,8 +165,7 @@ $top-nav--height: 4rem;
 }
 
 .blog-article {
-  margin-top: $top-nav--height + get('rhythm') * 2;
-  margin-bottom: get('rhythm') * 2;
+  @include body;
   color: get('gray');
   max-width: 32rem;
 
@@ -167,4 +176,8 @@ $top-nav--height: 4rem;
     color: color('gray', 10);
     margin-top: get('rhythm') / 4;
   }
+}
+
+.about {
+  @include body;
 }

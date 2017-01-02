@@ -1,7 +1,6 @@
-extend ../layouts/layout
+extend layouts/layout
 
 block content
-  ._container.blog-article
+  ._container.about
     h1.blog-article--title #{markdownFile.meta.title}
-    h5.blog-article--meta #{markdownFile.meta.date}
     != markdownFile.parseContent()

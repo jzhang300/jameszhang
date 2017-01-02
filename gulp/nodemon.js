@@ -11,7 +11,7 @@ gulp.task('nodemon', function(cb) {
   var called = false;
   return nodemon({
     script: 'app.js',
-    ext: 'jade',
+    ext: 'jade md',
     ignore: [
       'gulpfile.js',
       'node_modules/'

@@ -20,12 +20,12 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(errorHandler());
-  app.set('host', 'http://localhost');
+    app.use(errorHandler());
+    app.set('host', 'http://localhost');
 }
 
 app.get('/', function(req, res, next) {
-  res.render('pages/index');
+    res.render('index');
 });
 
 // Without view option specified, data is returned as JSON.
@@ -33,108 +33,128 @@ app.get('/', function(req, res, next) {
 // NOTE that the order of middleware(s) are important, so we need to put this first to route any requests to "/json" and handle as putting
 // this middleware after will never invoke it
 app.use('/json', markdownServe.middleware({
-  rootDirectory: path.resolve(__dirname, 'posts'),
+    rootDirectory: path.resolve(__dirname, 'posts'),
 }));
 
 app.get('/pages', function(req, res, next) {
-  getPages(req, res, next);
+    getPages(req, res, next);
 });
 
 app.get('/pages/:directory', function(req, res, next) {
-  getPages(req, res, next, req.params.directory);
+    getPages(req, res, next, req.params.directory);
 });
 
-app.use(markdownServe.middleware({
-  rootDirectory: path.resolve(__dirname, 'posts'),
-  view: 'pages/markdown'
-}));
+// app.use(markdownServe.middleware({
+//   rootDirectory: path.resolve(__dirname, 'posts'),
+//   view: 'article'
+// }));
+
+app.get('*', function(req, res, next) {
+    if (req.method !== 'GET') next();
+
+    var rootDir = path.resolve(__dirname, 'posts');
+    var markdownServer = new markdownServe.MarkdownServer(rootDir);
+
+    markdownServer.get(req.path, function(err, result) {
+        if (err) {
+            console.log(err);
+            next();
+            return;
+        }
+
+        delete result._file;
+        if (result.meta && !result.meta.draft) {
+            var view = result.meta.view || 'article';
+            res.render(view, {
+                markdownFile: result
+            });
+        } else {
+            next();
+        }
+    });
+});
 
 app.listen(app.get('port'), function() {
-  var h = (app.get('host') || os.hostname() || 'unknown') + ':' + app.get('port');
-  console.log('Express server listening at ' + h);
+    var h = (app.get('host') || os.hostname() || 'unknown') + ':' + app.get('port');
+    console.log('Express server listening at ' + h);
 });
 
 /*
 Get Pages
 */
 function getPages(req, res, next, directoryPath) {
-  // initiate promise
-  var files = (function() {
-    return Promise.resolve([]);
-  })();
+    // initiate promise
+    var files = (function() {
+        return Promise.resolve([]);
+    })();
 
-  // gets all filenames
-  function getAllFilenames(results) {
-    // readdirRecursive returns null as last element to indicate it's done reading all files.
-    var hasTerminated = false;
+    // gets all filenames
+    function getAllFilenames(results) {
+        // readdirRecursive returns null as last element to indicate it's done reading all files.
+        var hasTerminated = false;
 
-    return new Promise(function(resolve, reject) {
-      wrench.readdirRecursive('posts', function(error, curFiles) {
-        // add new filenames to array and filter out directory names
-        results = results.concat(curFiles).filter(function(value) {
-          if (value !== null) {
-            return value.includes('.md') ? true : false;
-          } else {
-            hasTerminated = true;
-            return false;
-          }
+        return new Promise(function(resolve, reject) {
+            wrench.readdirRecursive('posts', function(error, curFiles) {
+                // add new filenames to array and filter out directory names
+                results = results.concat(curFiles).filter(function(value) {
+                    if (value !== null) {
+                        return value.includes('.md') ? true : false;
+                    } else {
+                        hasTerminated = true;
+                        return false;
+                    }
+                });
+
+                // if wrench function has looked through all subdirectory filenames, resolve
+                if (hasTerminated)
+                    resolve(results);
+            });
+        });
+    };
+
+    // filter only files of directoryPath
+    function filterDirectoryFiles(results) {
+        if (typeof directoryPath !== 'undefined') {
+            var re = new RegExp('^' + directoryPath + '/');
+            return results.filter(function(filename) {
+                return re.test(filename);
+            });
+        } else
+            return results;
+    }
+
+    // get markdown data
+    function parseFiles(results) {
+        // array of promises that get markdown metadata
+        var newResults = [];
+        results.forEach(function(filename) {
+            newResults.push(
+                new Promise(function(resolve, reject) {
+                    parser.parse(path.join(__dirname + '/posts/', filename), {}, function(err, result) {
+                        if (err)
+                            reject(err);
+                        else {
+                            console.log(result);
+                            resolve({
+                                uriPath: filename.replace('.md', ''),
+                                meta: result.meta,
+                                content: result.rawContent
+                            });
+                        }
+                    })
+                })
+            );
         });
 
-        // if wrench function has looked through all subdirectory filenames, resolve
-        if (hasTerminated)
-          resolve(results);
-      });
-    });
-  };
-
-  // filter only files of directoryPath
-  function filterDirectoryFiles(results) {
-    if (typeof directoryPath !== 'undefined') {
-      var re = new RegExp('^' + directoryPath + '/');
-      return results.filter(function(filename) {
-        return re.test(filename);
-      });
+        return Promise.all(newResults);
     }
-    else
-      return results;
-  }
 
-  // get markdown data
-  function parseFiles(results) {
-    // array of promises that get markdown metadata
-    var newResults = [];
-    results.forEach(function(filename) {
-      newResults.push(
-        new Promise(function(resolve, reject) {
-          parser.parse(path.join(__dirname + '/posts/', filename), {}, function(err, result) {
-            if (err)
-              reject(err);
-            else {
-              console.log(result);
-              resolve({
-                uriPath: filename.replace('.md', ''),
-                meta: result.meta,
-                content: result.rawContent
-              });
-            }
-          })
-        })
-      );
-    });
-
-    return Promise.all(newResults);
-  }
-    // return results.map(function(filename) {
-    //
-    // });
-
-
-  files.then(getAllFilenames)
-       .then(filterDirectoryFiles)
-       .then(parseFiles)
-       .then(function(results) {
-         res.json(results);
-       }).catch(function(error) {
-         next(error);
-       });
+    files.then(getAllFilenames)
+        .then(filterDirectoryFiles)
+        .then(parseFiles)
+        .then(function(results) {
+            res.json(results);
+        }).catch(function(error) {
+            next(error);
+        });
 }

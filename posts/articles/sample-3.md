@@ -1,6 +1,6 @@
 title: A post-Brexit world
 description: Research shows that consumers with a utilitarian motivation find a low-arousal environment more pleasurable than a high arousal one.
-view: custom
+view: article
 date: 2016-04-09
 ---
 

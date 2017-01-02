@@ -1,6 +1,6 @@
 title: Sample page
 description: The majority of websites are composed of a bright, usually white background and dark text.
-view: custom
+view: article
 date: 2014-04-08
 ---
 # Sample Text: The Best Color Scheme for Your Website
