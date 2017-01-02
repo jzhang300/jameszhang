@@ -1255,6 +1255,10 @@ pre > code,
     .top-nav--a:hover {
       color: #EDD167;
       cursor: pointer; }
+  .top-nav--logo {
+    font-family: "selima";
+    font-size: 4.29153em;
+    color: white; }
 
 .hero {
   margin-top: 0rem;

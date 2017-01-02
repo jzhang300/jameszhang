@@ -25,7 +25,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('pages/index');
 });
 
 // Without view option specified, data is returned as JSON.
