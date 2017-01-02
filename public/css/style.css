@@ -1129,6 +1129,11 @@ pre > code,
   font-weight: 600;
   color: #FF585C; }
 
+.timeline--post-header-link {
+  border: none; }
+  .timeline--post-header-link:focus, .timeline--post-header-link:hover {
+    color: #ff8b8e; }
+
 .timeline--post-description {
   font-family: "ff-tisa-web-pro", Georgia, Utopia, Charter, serif;
   font-size: 1.125em;

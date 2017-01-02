@@ -16,7 +16,7 @@ script(type="text/html", id="timelineTemplate").
             <img class="timeline--post-image" src="images/sample-image.jpg" alt="">
           </div>
           <div class="timeline--post-content">
-            <h4 class="timeline--post-header base--h4"><%= item.posts[0].title %></h4>
+            <h4 class="timeline--post-header base--h4"><a class="base--a timeline--post-header-link" href="<%= item.posts[0].url %>"><%= item.posts[0].title %></a></h4>
             <h5 class="timeline--post-date base--h5">
               Posted on <%= item.posts[0].date %><!-- • <a class="base--a" href="">1 Comment</a>-->
             </h5>
@@ -35,7 +35,7 @@ script(type="text/html", id="timelineTemplate").
               <img class="timeline--post-image" src="images/sample-image.jpg" alt="">
             </div>
             <div class="timeline--post-content">
-              <h4 class="timeline--post-header base--h4"><%= post.title %></h4>
+              <h4 class="timeline--post-header base--h4"><a class="base--a timeline--post-header-link" href="<%= item.posts[0].url %>"><%= post.title %></a></h4>
               <h5 class="timeline--post-date base--h5">
                 Posted on <%= post.date %><!-- • <a class="base--a" href="">1 Comment</a>-->
               </h5>

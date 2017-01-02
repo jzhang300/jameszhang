@@ -263,6 +263,15 @@
     color: get('red');
   }
 
+  &--post-header-link {
+    border: none;
+
+    &:focus,
+    &:hover {
+      color: lighten(get('red'), 10%);
+    }
+  }
+
   &--post-description {
     font-family: get('serif');
     font-size: 1.125em;
