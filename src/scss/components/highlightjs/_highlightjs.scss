@@ -20,13 +20,13 @@ $hljs-mono-1:  lighten(get('gray'), 10%);
 $hljs-mono-2:  #818896;
 $hljs-mono-3:  color('gray', 10);
 $hljs-hue-1:   #56b6c2;
-$hljs-hue-2:   lighten(color('blue', 20), 10%);
-$hljs-hue-3:   #9f69d0;
+$hljs-hue-2:   #409ad5; // lighten(color('blue', 20), 10%);
+$hljs-hue-3:   #b16ade; //#9f69d0;
 // $hljs-hue-4:   #34a716;
-$hljs-hue-4:   #db2780;
+$hljs-hue-4:   #ff6371; // #db2780;
 $hljs-hue-5:   #e06c75;
 $hljs-hue-5-2: #be5046;
-$hljs-hue-6:   #d19a66;
+$hljs-hue-6:   #fda70a // #d19a66;
 $hljs-hue-6-2: #00b4a0;
 
 pre > code,
