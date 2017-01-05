@@ -22,7 +22,7 @@ code,
 .base--pre, pre code,
 .base--pre code, pre .base--code,
 .base--pre .base--code {
-  font-family: source-code-pro, "Inconsolata", Monaco, Consolas, "Courier New", Courier; }
+  font-family: menlo, source-code-pro, "Inconsolata", Monaco, Consolas, "Courier New", Courier; }
 
 article:before,
 .base--article:before, header:before,
@@ -619,7 +619,7 @@ pre,
   .base--pre code, pre .base--code,
   .base--pre .base--code {
     padding: 1em;
-    font-size: 1em;
+    font-size: 0.9em;
     outline: 0; }
 
 .base--ul, .base--ol {
@@ -891,7 +891,7 @@ pre > code,
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-  color: #9f69d0; }
+  color: #b16ade; }
 
 .hljs-section,
 .hljs-name,
@@ -908,11 +908,11 @@ pre > code,
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #db2780; }
+  color: #ff6371; }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #00b4a0; }
+  color: #0bbeaa; }
 
 .hljs-attr,
 .hljs-variable,
@@ -922,7 +922,7 @@ pre > code,
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-  color: #d19a66; }
+  color: #fda70a; }
 
 .hljs-class,
 .hljs-symbol,
@@ -943,7 +943,7 @@ pre > code,
   text-decoration: underline; }
 
 .hljs-value {
-  color: #00b4a0; }
+  color: #0bbeaa; }
 
 .timeline--line {
   position: absolute;
