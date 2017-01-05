@@ -1113,7 +1113,8 @@ pre > code,
   background-color: #E5E5E5; }
 
 .timeline--post-image {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
   display: block;
   background-color: #bfbfbf; }

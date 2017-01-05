@@ -2,6 +2,7 @@ title: Some 2015 post
 description: The majority of websites are composed of a bright, usually white background and dark text.
 view: article
 date: 2016-04-07
+image: /images/sample-image-2.jpg
 ---
 # Sample Text: The Best Color Scheme for Your Website
 

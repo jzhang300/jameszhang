@@ -26,7 +26,8 @@ $.when(
       title: item.meta.title,
       description: item.meta.description,
       date: date.format('MM/DD/YYYY'),
-      year: date.year()
+      year: date.year(),
+      image: item.meta.image || null
     };
   });
 

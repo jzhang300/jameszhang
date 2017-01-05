@@ -238,7 +238,8 @@
   }
 
   &--post-image {
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     height: auto;
     display: block;
     background-color: #bfbfbf;
