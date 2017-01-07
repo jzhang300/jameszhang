@@ -1,4 +1,5 @@
 title: My 2017 New Year's Resolution
+description: It is fitting that my first blog post to commemorate the birth of this site is also about my 2017 New Year's resolution...
 view: article
 date: 2017-01-07
 ---
