@@ -13,7 +13,9 @@ script(type="text/html", id="timelineTemplate").
       <div class="timeline--row">
         <div class="timeline--post timeline--post_large timeline--post_hidden">
           <div class="timeline--post-image-container">
-            <img class="timeline--post-image" src="images/sample-image.jpg" alt="">
+            <a class="timeline--post-image-link" href="<%= item.posts[0].url %>">
+              <img class="timeline--post-image" src="<%= item.posts[0].image || 'images/sample-image.jpg' %>">
+            </a>
           </div>
           <div class="timeline--post-content">
             <h4 class="timeline--post-header base--h4"><a class="base--a timeline--post-header-link" href="<%= item.posts[0].url %>"><%= item.posts[0].title %></a></h4>
@@ -32,7 +34,9 @@ script(type="text/html", id="timelineTemplate").
         <% if (!(key === 0 && postKey === 0)) { %>
           <div class="timeline--post timeline--post_hidden">
             <div class="timeline--post-image-container">
-              <img class="timeline--post-image" src="<%= item.posts[postKey].image || 'images/sample-image.jpg' %>" alt="">
+              <a class="timeline--post-image-link" href="<%= post.url %>">
+                <img class="timeline--post-image" src="<%= post.image || 'images/sample-image.jpg' %>" alt="">
+              </a>
             </div>
             <div class="timeline--post-content">
               <h4 class="timeline--post-header base--h4"><a class="base--a timeline--post-header-link" href="<%= item.posts[postKey].url %>"><%= post.title %></a></h4>

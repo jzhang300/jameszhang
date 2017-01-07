@@ -2,6 +2,9 @@ title: My 2017 New Year's Resolution
 description: It is fitting that my first blog post to commemorate the birth of this site is also about my 2017 New Year's resolution...
 view: article
 date: 2017-01-07
+image: /images/articles/2017-01-07-new-years-resolution/2017.png
+image_source: https://dribbble.com/shots/3186188-Happy-New-Year
+image_author: Giga Tamarashvili
 ---
 
 Hello, World!
