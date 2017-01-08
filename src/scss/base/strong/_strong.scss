@@ -1,6 +1,8 @@
 @import 'mixins';
 @import 'extends';
 
+b,
+strong,
 .base--strong {
   @extend %base--strong;
 }

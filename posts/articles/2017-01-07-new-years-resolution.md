@@ -11,9 +11,9 @@ Hello, World!
 
 It is fitting that my first blog post to commemorate the birth of this site is also about my 2017 New Year's resolution.  My new site along with the new year represents a new beginning for me in my life.
 
-2016 was a year of growing pains for me and a year of constant negativity. Like with all things though, it has come and past, and I've come back learning a few things that will help me, moving forward.
+2016 was a year of growing pains and a year of constant negativity. Like with all things though, it has come and past, and I've come back, learning a few things that will help me move forward.
 
-Among the things I've learned, I've come to realize the importance of family, friends, and other positive influences, who are there for you when you're low, and likewise how important it is to be there for others as well.  No one can do things alone, everyone needs support from others.
+Among the things, I've come to realize the importance of family, friends, and other positive influences, who are there for you when you're low, and likewise how important it is to be there for others as well.  No one can do things alone, everyone needs the help and support from others.
 
 So moving forward to 2017, I have two new years resolutions:
 
@@ -24,9 +24,9 @@ So moving forward to 2017, I have two new years resolutions:
 
 **I am my best version of myself when I create things I'm passionate about.**
 
-The first major project I will create is this website.  Through this site, I can post my works on a regular basis, and develop a voice to share my ideas and expertise to the world.  The site will also serve as a playground for creative experimentations.
+The first major project I will create is this website.  Through this site, I can post my works on a regular basis, and develop a voice to share my ideas and expertise to the world.
 
-At work, one of my goals this year is to make our [Watson React Component Library](https://watson-developer-cloud.github.io/react-components/) into an industry leading example of great react ui components. On the side, I want to create more web apps and art.
+**At work**, one of my goals this year is to make our [Watson React Component Library](https://watson-developer-cloud.github.io/react-components/) into an industry leading example of great react ui components. **On the side**, I want to create more web apps and art.
 
 ## Run More
 
