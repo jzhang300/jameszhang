@@ -1,9 +1,10 @@
 extend layouts/layout
 
+
 block content
   ._container.blog-article
     h1.blog-article--title #{markdownFile.meta.title}
-    h5.blog-article--meta #{markdownFile.meta.date}
+    h5.blog-article--meta Posted on #{formattedDate}
     a.blog-article--image-link(href="#{markdownFile.meta.image_source}" target="_blank")
       img.blog-article--image(src="#{markdownFile.meta.image}" title="graphic #{markdownFile.meta.image_author ? 'by ' + markdownFile.meta.image_author : '' }")
     != markdownFile.parseContent()

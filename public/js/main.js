@@ -36,7 +36,7 @@ $.when(
       url: item.uriPath,
       title: item.meta.title,
       description: item.meta.description,
-      date: date.format('MM/DD/YYYY'),
+      date: date.format('MMMM DD, YYYY'),
       year: date.year(),
       image: item.meta.image || null
     };
@@ -83,12 +83,12 @@ $.when(
   var maximum;
   $(window).scroll(function() {
     $('.timeline--post').each(function() {
-      if (this.getBoundingClientRect().top < 400 && this.getBoundingClientRect().top > -200) {
+      if (this.getBoundingClientRect().top < 800 && this.getBoundingClientRect().top > -200) {
         $(this).removeClass('timeline--post_hidden');
       }
     });
     $('.timeline--tag').each(function() {
-      if (this.getBoundingClientRect().top < 400 && this.getBoundingClientRect().top > -200) {
+      if (this.getBoundingClientRect().top < 800 && this.getBoundingClientRect().top > -200) {
         $(this).removeClass('timeline--tag_hidden');
       }
     });

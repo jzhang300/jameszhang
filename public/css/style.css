@@ -1019,8 +1019,8 @@ pre > code,
   -webkit-transform-origin: left center;
           transform-origin: left center;
   visibility: visible;
-  -webkit-transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1);
-  transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1); }
+  -webkit-transition: 0.4s cubic-bezier(0.92, 0.01, 0.05, 1);
+  transition: 0.4s cubic-bezier(0.92, 0.01, 0.05, 1); }
   @media (min-width: 640px) {
     .timeline--tag {
       margin-left: 0rem;
@@ -1039,8 +1039,8 @@ pre > code,
   text-align: left;
   background-color: #FFFFFF;
   position: relative;
-  -webkit-transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1);
-  transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1);
+  -webkit-transition: 0.4s cubic-bezier(0.92, 0.01, 0.05, 1);
+  transition: 0.4s cubic-bezier(0.92, 0.01, 0.05, 1);
   visibility: visible;
   -webkit-transform-origin: -8% 1.75rem;
           transform-origin: -8% 1.75rem;

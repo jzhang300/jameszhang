@@ -5,6 +5,7 @@ var express = require('express'),
     errorHandler = require('errorhandler'),
     markdownServe = require('markdown-serve'),
     wrench = require('wrench'),
+    moment = require('moment'),
     Promise = require('bluebird'),
     parser = require('./node_modules/markdown-serve/lib/parser.js'),
     resolver = require('./node_modules/markdown-serve/lib/resolver.js');
@@ -65,8 +66,11 @@ app.get('*', function(req, res, next) {
         delete result._file;
         if (result.meta && !result.meta.draft) {
             var view = result.meta.view || 'article';
+            var date = moment(result.meta.date);
+            date.date(date.date() + 1);
             res.render(view, {
-                markdownFile: result
+                markdownFile: result,
+                formattedDate: date.format('MMMM DD, YYYY')
             });
         } else {
             next();
