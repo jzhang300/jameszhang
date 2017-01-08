@@ -156,6 +156,10 @@ $footer--height: 10.8125rem;  // manual size of the footer--height
     display: inline;
     max-height: none;
   }
+
+  &--sun-shapes-container {
+    transform-origin: 66.35% 83.885%;
+  }
 }
 
 .main {
@@ -166,7 +170,7 @@ $footer--height: 10.8125rem;  // manual size of the footer--height
 .blog-article {
   @include body;
   color: get('gray');
-  max-width: 32rem;
+  // max-width: 32rem;
 
   &--meta {
     font-family: get('sans serif');

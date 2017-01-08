@@ -2,9 +2,39 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 @font-face {
-  font-family: 'ff-tisa-web-pro';
-  src: url("../../fonts/ff-tisa-web-pro/ff-tisa-web-pro.eot");
-  src: url("../../fonts/ff-tisa-web-pro/ff-tisa-web-pro.eot?#iefix") format("eot"), url("../../fonts/ff-tisa-web-pro/ff-tisa-web-pro.woff") format("woff"), url("../../fonts/ff-tisa-web-pro/ff-tisa-web-pro.ttf") format("truetype"), url("../../fonts/ff-tisa-web-pro/ff-tisa-web-pro.svg#icons") format("svg"); }
+  font-family: 'TisaPro';
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-Bold.eot");
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/ff-tisa-web-pro/TisaPro-Bold.woff2") format("woff2"), url("../../fonts/ff-tisa-web-pro/TisaPro-Bold.woff") format("woff"), url("../../fonts/ff-tisa-web-pro/TisaPro-Bold.ttf") format("truetype"), url("../../fonts/ff-tisa-web-pro/TisaPro-Bold.svg#TisaPro-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'TisaPro';
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-MediumItalic.eot");
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/ff-tisa-web-pro/TisaPro-MediumItalic.woff2") format("woff2"), url("../../fonts/ff-tisa-web-pro/TisaPro-MediumItalic.woff") format("woff"), url("../../fonts/ff-tisa-web-pro/TisaPro-MediumItalic.ttf") format("truetype"), url("../../fonts/ff-tisa-web-pro/TisaPro-MediumItalic.svg#TisaPro-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'TisaPro';
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-BoldItalic.eot");
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/ff-tisa-web-pro/TisaPro-BoldItalic.woff2") format("woff2"), url("../../fonts/ff-tisa-web-pro/TisaPro-BoldItalic.woff") format("woff"), url("../../fonts/ff-tisa-web-pro/TisaPro-BoldItalic.ttf") format("truetype"), url("../../fonts/ff-tisa-web-pro/TisaPro-BoldItalic.svg#TisaPro-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'TisaPro';
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-Medium.eot");
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/ff-tisa-web-pro/TisaPro-Medium.woff2") format("woff2"), url("../../fonts/ff-tisa-web-pro/TisaPro-Medium.woff") format("woff"), url("../../fonts/ff-tisa-web-pro/TisaPro-Medium.ttf") format("truetype"), url("../../fonts/ff-tisa-web-pro/TisaPro-Medium.svg#TisaPro-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'TisaPro';
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-Regular.eot");
+  src: url("../../fonts/ff-tisa-web-pro/TisaPro-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/ff-tisa-web-pro/TisaPro-Regular.woff2") format("woff2"), url("../../fonts/ff-tisa-web-pro/TisaPro-Regular.woff") format("woff"), url("../../fonts/ff-tisa-web-pro/TisaPro-Regular.ttf") format("truetype"), url("../../fonts/ff-tisa-web-pro/TisaPro-Regular.svg#TisaPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
   font-family: 'selima';
@@ -312,7 +342,7 @@ body {
   margin: 0rem;
   background: #FFFFFF;
   color: #333;
-  font-family: "ff-tisa-web-pro", Georgia, Utopia, Charter, serif;
+  font-family: "TisaPro", Georgia, Utopia, Charter, serif;
   font-weight: 200;
   line-height: 1.5; }
   body * + * {
@@ -570,19 +600,20 @@ a,
 .base--em {
   font-style: italic; }
 
+b,
+strong,
 .base--strong {
   font-weight: 700; }
 
 .base--img,
 img {
-  max-height: 26rem;
   margin: auto;
   display: block; }
 
 p,
 .base--p {
   font-size: 1.125em;
-  font-family: "ff-tisa-web-pro", Georgia, Utopia, Charter, serif;
+  font-family: "TisaPro", Georgia, Utopia, Charter, serif;
   line-height: 1.675; }
 
 code,
@@ -988,8 +1019,8 @@ pre > code,
   -webkit-transform-origin: left center;
           transform-origin: left center;
   visibility: visible;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
+  -webkit-transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1);
+  transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1); }
   @media (min-width: 640px) {
     .timeline--tag {
       margin-left: 0rem;
@@ -1008,8 +1039,8 @@ pre > code,
   text-align: left;
   background-color: #FFFFFF;
   position: relative;
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
+  -webkit-transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1);
+  transition: 0.7s cubic-bezier(0.92, 0.01, 0.05, 1);
   visibility: visible;
   -webkit-transform-origin: -8% 1.75rem;
           transform-origin: -8% 1.75rem;
@@ -1140,7 +1171,7 @@ pre > code,
     color: #ff8b8e; }
 
 .timeline--post-description {
-  font-family: "ff-tisa-web-pro", Georgia, Utopia, Charter, serif;
+  font-family: "TisaPro", Georgia, Utopia, Charter, serif;
   font-size: 1.125em;
   margin-bottom: 1rem;
   color: #484848; }
@@ -1360,6 +1391,9 @@ pre > code,
             user-select: none;
     display: inline;
     max-height: none; }
+  .blog--sun-shapes-container {
+    -webkit-transform-origin: 66.35% 83.885%;
+            transform-origin: 66.35% 83.885%; }
 
 .main {
   margin-top: 0rem; }
@@ -1368,8 +1402,7 @@ pre > code,
   padding-top: calc(4rem + 3rem);
   min-height: calc(100% - 10.8125rem);
   padding-bottom: 3rem;
-  color: #484848;
-  max-width: 32rem; }
+  color: #484848; }
   .blog-article--meta {
     font-family: "Source Sans pro", Verdana Pro, sans-serif;
     font-weight: 400;

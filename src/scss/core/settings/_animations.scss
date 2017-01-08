@@ -190,3 +190,6 @@ $animations: (
     )
   )
 );
+
+$GlobalSettings: map-merge($GlobalSettings, $timing-functions);
+$GlobalSettings: map-merge($GlobalSettings, $animations);

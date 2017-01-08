@@ -60,7 +60,7 @@
     transform: scale(1);
     transform-origin: left center;
     visibility: visible;
-    transition: 0.2s;
+    transition: 0.7s get('snap-in-out');
 
     @include breakpoint(get('small')) {
       margin-left: 0rem;
@@ -83,7 +83,7 @@
     text-align: left;
     background-color: $post-color;
     position: relative;
-    transition: 0.15s;
+    transition: 0.7s get('snap-in-out');
     visibility: visible;
     transform-origin: #{0% - $post-margin-from-line * 2} #{$post-arrow-position - $post-arrow-width / 2};
     margin-bottom: 3rem;
