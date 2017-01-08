@@ -81,14 +81,15 @@ $.when(
   dataBind($timeline, timeline_template, sortedArticles);
   var heroPosition;
   var maximum;
-  $(window).scroll(function() {
+  var parallax = function() {
     $('.timeline--post').each(function() {
-      if (this.getBoundingClientRect().top < 800 && this.getBoundingClientRect().top > -200) {
+      // reveal when scrolling down                 // reveal when scrolling up
+      if (this.getBoundingClientRect().top < 600 && this.getBoundingClientRect().top > -200) {
         $(this).removeClass('timeline--post_hidden');
       }
     });
     $('.timeline--tag').each(function() {
-      if (this.getBoundingClientRect().top < 800 && this.getBoundingClientRect().top > -200) {
+      if (this.getBoundingClientRect().top < 600 && this.getBoundingClientRect().top > -200) {
         $(this).removeClass('timeline--tag_hidden');
       }
     });
@@ -113,5 +114,7 @@ $.when(
     // [ 0, 448 ]
     // [ #6ED1E0, #ffd8a8]
     console.log();
-  });
+  }
+  $(window).scroll(parallax);
+  parallax();
 });
