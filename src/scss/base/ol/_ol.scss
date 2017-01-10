@@ -1,5 +1,13 @@
 @import 'extends';
 
+ol,
 .base--ol {
   @extend %base--ol;
+}
+
+ul ol,
+ol ol,
+.base--ul .base--ol,
+.base--ol .base--ol {
+  @extend %base--ol-nested;
 }

@@ -94,26 +94,25 @@ $.when(
       }
     });
 
-    maximum = $('.hero')[0].getBoundingClientRect().height;
-    heroPosition = maximum - ($('.hero')[0].getBoundingClientRect().bottom - $('.top-nav')[0].getBoundingClientRect().height);
-    console.log(maximum, heroPosition, transition3(heroPosition, maximum, 110, 209, 224, 255, 216, 168));
-    $('.hero').css(
-      'background-color',
-      transition3(heroPosition, maximum / 3, 110, 209, 224, 255, 209, 198)
-    );
-    $('.hero--text').css(
-      'background-color',
-      transition3(heroPosition, maximum / 3, 110, 209, 224, 255, 209, 198)
-    );
-    $('.blog--sun circle').css({
-      fill: transition3(heroPosition, maximum / 3, 255, 231, 79, 255, 88, 92)
-    });
-    $('.blog--sun path').css({
-      stroke: transition3(heroPosition, maximum / 3, 255, 222, 11, 255, 88, 92)
-    });
+    // maximum = $('.hero')[0].getBoundingClientRect().height;
+    // heroPosition = maximum - ($('.hero')[0].getBoundingClientRect().bottom - $('.top-nav')[0].getBoundingClientRect().height);
+    // console.log(maximum, heroPosition, transition3(heroPosition, maximum, 110, 209, 224, 255, 216, 168));
+    // $('.hero').css(
+    //   'background-color',
+    //   transition3(heroPosition, maximum / 3, 110, 209, 224, 255, 209, 198)
+    // );
+    // $('.hero--text').css(
+    //   'background-color',
+    //   transition3(heroPosition, maximum / 3, 110, 209, 224, 255, 209, 198)
+    // );
+    // $('.blog--sun circle').css({
+    //   fill: transition3(heroPosition, maximum / 3, 255, 231, 79, 255, 88, 92)
+    // });
+    // $('.blog--sun path').css({
+    //   stroke: transition3(heroPosition, maximum / 3, 255, 222, 11, 255, 88, 92)
+    // });
     // [ 0, 448 ]
     // [ #6ED1E0, #ffd8a8]
-    console.log();
   }
   $(window).scroll(parallax);
   parallax();

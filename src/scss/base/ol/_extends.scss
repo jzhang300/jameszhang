@@ -1,3 +1,14 @@
 %base--ol {
-  @include base--list(counter(table-ol) '.');
+  @include base--list(counter(table-ol) '.') {
+    font-size: 1.1em;
+    font-family: get('sans serif');
+    font-weight: get('weight medium');
+    color: get('red');
+  }
+  counter-reset: table-ol;
+}
+
+%base--ol-nested {
+  @include base--list(counter(table-ol, lower-alpha) '.');
+  counter-reset: table-ol;
 }

@@ -374,19 +374,19 @@ h3,
 h4,
 .base--h4 {
   font-size: 1.40625em;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
 h5,
 .base--h5 {
   font-size: 1.125em;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
 h6,
 .base--h6 {
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
 .base--input, .base--color-input, .base--date-input, .base--datetime-local-input, .base--email-input, .base--file-input, .base--hidden-input, .base--month-input, .base--number-input, .base--password-input, .base--range-input, .base--search-input, .base--tel-input, .base--text-input, .base--time-input, .base--url-input, .base--week-input, .base--select {
@@ -653,24 +653,71 @@ pre,
     font-size: 0.9em;
     outline: 0; }
 
-.base--ul, .base--ol {
+ul,
+.base--ul, ol,
+.base--ol, ul ol,
+ol ol,
+.base--ul .base--ol,
+.base--ol .base--ol {
   display: table;
   padding-left: 0;
   margin-left: 0;
   list-style: none; }
-  .base--ul li, .base--ol li, .base--ul .base--li, .base--ol .base--li {
+  ul li,
+  .base--ul li, ol li,
+  .base--ol li,
+  .base--ul .base--ol li,
+  .base--ol .base--ol li, ul .base--li,
+  .base--ul .base--li, ol .base--li,
+  .base--ol .base--li {
     display: table-row;
     counter-increment: table-ol; }
-    .base--ul li:before, .base--ol li:before, .base--ul .base--li:before, .base--ol .base--li:before {
+    ul li:before,
+    .base--ul li:before, ol li:before,
+    .base--ol li:before,
+    .base--ul .base--ol li:before,
+    .base--ol .base--ol li:before, ul .base--li:before,
+    .base--ul .base--li:before, ol .base--li:before,
+    .base--ol .base--li:before {
       display: table-cell;
       padding-right: .4em;
       text-align: right; }
 
-.base--ul li:before, .base--ul .base--li:before {
-  content: "•"; }
+ul > li:before,
+.base--ul > li:before, ul > .base--li:before,
+.base--ul > .base--li:before {
+  content: "•";
+  font-size: 1.2em;
+  color: #bcb9b1;
+  width: 2.45rem;
+  text-align: right;
+  padding-right: 0.6rem; }
 
-.base--ol li:before, .base--ol .base--li:before {
-  content: counter(table-ol) "."; }
+ol,
+.base--ol {
+  counter-reset: table-ol; }
+  ol > li:before,
+  .base--ol > li:before, ol > .base--li:before,
+  .base--ol > .base--li:before {
+    content: counter(table-ol) ".";
+    font-size: 1.1em;
+    font-family: "Source Sans pro", Verdana Pro, sans-serif;
+    font-weight: 600;
+    color: #FF585C; }
+
+ul ol,
+ol ol,
+.base--ul .base--ol,
+.base--ol .base--ol {
+  counter-reset: table-ol; }
+  ul ol > li:before,
+  ol ol > li:before,
+  .base--ul .base--ol > li:before,
+  .base--ol .base--ol > li:before, ul ol > .base--li:before,
+  ol ol > .base--li:before,
+  .base--ul .base--ol > .base--li:before,
+  .base--ol .base--ol > .base--li:before {
+    content: counter(table-ol, lower-alpha) "."; }
 
 .base--blockquote {
   padding: 0em 1.5em;
@@ -757,133 +804,155 @@ pre,
   margin: 0rem 1rem 1rem 0rem; }
   .color-tile:nth-of-type(1) {
     background-color: #E74C3C;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(1):after {
       content: "color(red, 10) | #E74C3C";
       display: none; }
   .color-tile:nth-of-type(2) {
     background-color: #C0392B;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(2):after {
       content: "color(red, 20) | #C0392B";
       display: none; }
   .color-tile:nth-of-type(3) {
     background-color: #E67E22;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(3):after {
       content: "color(orange, 10) | #E67E22";
       display: none; }
   .color-tile:nth-of-type(4) {
     background-color: #D35400;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(4):after {
       content: "color(orange, 20) | #D35400";
       display: none; }
   .color-tile:nth-of-type(5) {
     background-color: #EDD167;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(5):after {
       content: "color(yellow, 10) | #EDD167";
       display: none; }
   .color-tile:nth-of-type(6) {
     background-color: #F39C12;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(6):after {
       content: "color(yellow, 20) | #F39C12";
       display: none; }
   .color-tile:nth-of-type(7) {
     background-color: #2ECC71;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(7):after {
       content: "color(green, 10) | #2ECC71";
       display: none; }
   .color-tile:nth-of-type(8) {
     background-color: #27AE60;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(8):after {
       content: "color(green, 20) | #27AE60";
       display: none; }
   .color-tile:nth-of-type(9) {
     background-color: #41ACA3;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(9):after {
       content: "color(turquoise, 10) | #41ACA3";
       display: none; }
   .color-tile:nth-of-type(10) {
     background-color: #16A085;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(10):after {
       content: "color(turquoise, 20) | #16A085";
       display: none; }
   .color-tile:nth-of-type(11) {
     background-color: #6ED1E0;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(11):after {
       content: "color(blue, 10) | #6ED1E0";
       display: none; }
   .color-tile:nth-of-type(12) {
     background-color: #2980B9;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(12):after {
       content: "color(blue, 20) | #2980B9";
       display: none; }
   .color-tile:nth-of-type(13) {
     background-color: #9B59B6;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(13):after {
       content: "color(purple, 10) | #9B59B6";
       display: none; }
   .color-tile:nth-of-type(14) {
     background-color: #8E44AD;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(14):after {
       content: "color(purple, 20) | #8E44AD";
       display: none; }
   .color-tile:nth-of-type(15) {
     background-color: #FFFFFF;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(15):after {
       content: "color(white, 10) | #FFFFFF";
       display: none; }
   .color-tile:nth-of-type(16) {
     background-color: #F4F4F4;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(16):after {
       content: "color(white, 20) | #F4F4F4";
       display: none; }
   .color-tile:nth-of-type(17) {
     background-color: #BDC3C7;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(17):after {
       content: "color(white, 30) | #BDC3C7";
       display: none; }
   .color-tile:nth-of-type(18) {
     background-color: #95A5A6;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(18):after {
       content: "color(gray, 10) | #95A5A6";
       display: none; }
   .color-tile:nth-of-type(19) {
     background-color: #7F8C8D;
-    color: #333333; }
+    color: #333333;
+    font-weight: 600; }
     .color-tile:nth-of-type(19):after {
       content: "color(gray, 20) | #7F8C8D";
       display: none; }
   .color-tile:nth-of-type(20) {
     background-color: #34495E;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(20):after {
       content: "color(black, 10) | #34495E";
       display: none; }
   .color-tile:nth-of-type(21) {
     background-color: #2C3E50;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(21):after {
       content: "color(black, 20) | #2C3E50";
       display: none; }
   .color-tile:nth-of-type(22) {
     background-color: #333333;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
     .color-tile:nth-of-type(22):after {
       content: "color(black, 30) | #333333";
       display: none; }

@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'extends';
 
+ul,
 .base--ul {
   @extend %base--ul;
 }

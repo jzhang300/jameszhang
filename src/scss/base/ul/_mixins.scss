@@ -1,8 +1,9 @@
 @mixin base--list($counter) {
-  li,
-  .base--li {
+  & > li,
+  & > .base--li {
     &:before {
       content: $counter;
+      @content;
     }
   }
 
