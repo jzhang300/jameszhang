@@ -687,7 +687,7 @@ ul > li:before,
 .base--ul > li:before, ul > .base--li:before,
 .base--ul > .base--li:before {
   content: "•";
-  font-size: 1.2em;
+  font-size: 1.125rem;
   color: #bcb9b1;
   width: 2.45rem;
   text-align: right;
@@ -695,7 +695,8 @@ ul > li:before,
 
 ol,
 .base--ol {
-  counter-reset: table-ol; }
+  counter-reset: table-ol;
+  font-size: 1.125rem; }
   ol > li:before,
   .base--ol > li:before, ol > .base--li:before,
   .base--ol > .base--li:before {

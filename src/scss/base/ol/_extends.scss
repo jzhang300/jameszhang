@@ -6,9 +6,10 @@
     color: get('red');
   }
   counter-reset: table-ol;
+  font-size: 1.125rem;
 }
 
 %base--ol-nested {
-  @include base--list(counter(table-ol, lower-alpha) '.');
+  @include base--list(counter(table-ol, lower-alpha) '.')
   counter-reset: table-ol;
 }

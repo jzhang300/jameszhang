@@ -24,7 +24,7 @@
 
 %base--ul {
   @include base--list('•') {
-    font-size: 1.2em;
+    font-size: 1.125rem;
     color: darken(get('warm gray 2'), 15%);
     width: 2.45rem;
     text-align: right;
