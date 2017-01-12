@@ -25,7 +25,7 @@ $.when(
 
   // 1. remove dateless posts
   var sortedArticles = articles.filter(function(item) {
-    return item.meta.hasOwnProperty('date');
+    return item.meta.hasOwnProperty('date') && !item.meta.draft;
   });
 
   // 2. reformat posts
