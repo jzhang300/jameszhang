@@ -184,3 +184,7 @@ $footer--height: 10.8125rem;  // manual size of the footer--height
 .about {
   @include body;
 }
+
+#disqus_thread {
+  margin-top: 3.5rem;
+}

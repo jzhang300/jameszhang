@@ -1496,3 +1496,6 @@ pre > code,
   padding-top: calc(4rem + 3rem);
   min-height: calc(100% - 10.8125rem);
   padding-bottom: 3rem; }
+
+#disqus_thread {
+  margin-top: 3.5rem; }
