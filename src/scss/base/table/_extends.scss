@@ -4,16 +4,17 @@
 
 %base--thead {
   font-weight: bold;
-  color: get('white');
-  background-color: get('primary color');
+}
+
+%base--th {
+  padding: 1rem;
+  text-align: left;
 }
 
 %base--td {
-  padding: 1em;
+  padding: 1rem;
 }
 
 %base--tr {
-  &:nth-of-type(even) {
-    background-color: color('gray', 10);
-  }
+  border-bottom: 1px solid color('white', 30);
 }

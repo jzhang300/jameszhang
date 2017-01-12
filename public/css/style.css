@@ -354,38 +354,38 @@ body {
 
 h1,
 .base--h1 {
-  font-size: 1.999em;
+  font-size: 1.999rem;
   font-weight: 700;
   font-family: "Source Sans pro", Verdana Pro, sans-serif;
   color: #FF585C; }
 
 h2,
 .base--h2 {
-  font-size: 1.75781em;
+  font-size: 1.75781rem;
   font-weight: 700;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
 h3,
 .base--h3 {
-  font-size: 1.49962em;
+  font-size: 1.49962rem;
   font-weight: 700;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
 h4,
 .base--h4 {
-  font-size: 1.40625em;
+  font-size: 1.40625rem;
   font-weight: 600;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
 h5,
 .base--h5 {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   font-weight: 600;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
 h6,
 .base--h6 {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   font-weight: 600;
   font-family: "Source Sans pro", Verdana Pro, sans-serif; }
 
@@ -612,16 +612,17 @@ img {
 
 p,
 .base--p {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   font-family: "TisaPro", Georgia, Utopia, Charter, serif;
   line-height: 1.675; }
 
 code,
 .base--code {
-  padding: .2em .5em;
-  font-size: .8em;
-  color: #E67E22;
-  outline: 1px solid rgba(127, 140, 141, 0.25); }
+  padding: .3em .4em;
+  font-size: 0.9rem;
+  color: #FF585C;
+  background-color: #f9f9f9;
+  font-family: menlo, source-code-pro, "Inconsolata", Monaco, Consolas, "Courier New", Courier; }
 
 pre,
 .base--pre, pre code,
@@ -671,7 +672,8 @@ ol ol,
   .base--ul .base--li, ol .base--li,
   .base--ol .base--li {
     display: table-row;
-    counter-increment: table-ol; }
+    counter-increment: table-ol;
+    font-size: 1.125rem; }
     ul li:before,
     .base--ul li:before, ol li:before,
     .base--ol li:before,
@@ -689,14 +691,12 @@ ul > li:before,
   content: "•";
   font-size: 1.125rem;
   color: #bcb9b1;
-  width: 2.45rem;
   text-align: right;
   padding-right: 0.6rem; }
 
 ol,
 .base--ol {
-  counter-reset: table-ol;
-  font-size: 1.125rem; }
+  counter-reset: table-ol; }
   ol > li:before,
   .base--ol > li:before, ol > .base--li:before,
   .base--ol > .base--li:before {
@@ -727,19 +727,26 @@ ol ol,
   font-style: italic;
   border-left: 0.25em solid; }
 
+table,
 .base--table {
   width: 100%; }
 
+thead,
 .base--thead {
-  font-weight: bold;
-  color: #fff;
-  background-color: #6ED1E0; }
+  font-weight: bold; }
 
+th,
+.base--th {
+  padding: 1rem;
+  text-align: left; }
+
+td,
 .base--td {
-  padding: 1em; }
+  padding: 1rem; }
 
-.base--tr:nth-of-type(even) {
-  background-color: #95A5A6; }
+tr,
+.base--tr {
+  border-bottom: 1px solid #BDC3C7; }
 
 .base--hr {
   border-top: 2px solid #F4F4F4; }
@@ -1232,6 +1239,7 @@ pre > code,
 .timeline--post-date {
   font-size: 1.125em;
   font-family: "Source Sans pro", Verdana Pro, sans-serif;
+  font-weight: 400;
   color: #999999; }
 
 .timeline--post-header {
@@ -1395,7 +1403,7 @@ pre > code,
   .hero--name {
     margin-bottom: 1rem;
     font-family: "selima";
-    font-size: 4.29153em;
+    font-size: 4.29153rem;
     font-weight: 400;
     color: white; }
   .hero--role {
