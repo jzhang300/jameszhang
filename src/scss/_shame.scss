@@ -179,6 +179,12 @@ $footer--height: 10.8125rem;  // manual size of the footer--height
     color: color('gray', 10);
     margin-top: get('rhythm') / 4;
   }
+
+  &--image-link {
+    img {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .about {

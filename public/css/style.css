@@ -1491,6 +1491,8 @@ pre > code,
     margin-bottom: 1.5rem;
     color: #95A5A6;
     margin-top: 0.5rem; }
+  .blog-article--image-link img {
+    margin-bottom: 2rem; }
 
 .about {
   padding-top: calc(4rem + 3rem);
