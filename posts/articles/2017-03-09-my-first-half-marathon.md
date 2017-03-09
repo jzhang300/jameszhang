@@ -1,5 +1,5 @@
 title: Completing my First Half Marathon
-description: It happens all too often. You run into conflicts with someone who you think is wrong, or you're complaining about things that don't go your way...
+description: How the hell does one go from barely running 1.5 miles to 13.1 miles in two months?
 view: article
 date: 2017-03-09
 image: /images/articles/2017-03-09-my-first-half-marathon/winner.png
