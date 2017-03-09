@@ -114,3 +114,5 @@ want to give special thanks to these people:
 A half-marathon in two months is not as impossible as it seems.  If I was able to do it,
 then I know anyone can do this.  Maybe your goal isn't to do a marathon, but I hope
 that you can take what I've learned and apply it to your needs.
+
+![Victory Pose with German and me](/images/articles/2017-03-09-my-first-half-marathon/german-james.jpg)
