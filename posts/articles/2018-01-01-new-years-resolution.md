@@ -31,13 +31,13 @@ Some examples of goals that do not work are "exercising more," "reading more boo
 * they’re unrealistic.
 * there’s no time frame.
 
-Goals that _have_ successfully worked for me is when I [trained for the half marathon](g) last year.  That’s why I designed my 2018 New Year Resolution goals to…
+Goals that _have_ successfully worked for me is when I [trained for the half marathon](http://www.jameszhang.io/articles/2017-03-09-my-first-half-marathon) last year.  Taking what I have learned, I have designed my 2018 New Year Resolution goals to…
 * have clearly defined commitments.
 * have an end goal and steps to get there.
 * be realistic.
 * be measurable.
 
-These goals aren’t actually that unique.  They’re based on [SMART goals](http://topachievement.com/smart.html).
+These goals are actually not unique.  They’re based on [SMART goals](http://topachievement.com/smart.html).
 
 ## Closing thoughts
-Having clear goals creates more accountability for me and provides structure that helps me become a more well-rounded individual.  Goals will be tweaked as needed if too unrealistic or too easy.
+Having clear goals creates more accountability and provides structure that helps me become a more well-rounded individual.  Goals will be tweaked as needed if too unrealistic or too easy.
