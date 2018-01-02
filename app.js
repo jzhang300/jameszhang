@@ -67,7 +67,7 @@ app.get('*', function(req, res, next) {
         if (result.meta && !result.meta.draft) {
             var view = result.meta.view || 'article';
             var date = moment(result.meta.date);
-            date.date(date.date() + 1);
+            date.date(date.date());
             res.render(view, {
                 markdownFile: result,
                 formattedDate: date.format('MMMM DD, YYYY')
