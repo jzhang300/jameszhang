@@ -7,7 +7,7 @@ image_source: https://dribbble.com/shots/4048537-2018
 image_author: Nick Kumbari
 ---
 
-2017 was a tremendous year of personal growth for me.  Some major accomplishments were **completing a half marathon for the first time**, **receiving a promotion and led a development team**, and **launching my new personal site**.  Overall, I learned how to really enjoy myself more and become a more emotionally resilient person.
+2017 was a tremendous year of personal growth for me.  Some major accomplishments were **completing a half marathon for the first time**, **receiving a promotion and leading a development team**, and **launching my new personal site**.  Overall, I learned how to really enjoy myself more and become a more emotionally resilient person.
 
 ## This year's goals
 
