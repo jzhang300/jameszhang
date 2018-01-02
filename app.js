@@ -70,7 +70,7 @@ app.get('*', function(req, res, next) {
             date.date(date.date());
             res.render(view, {
                 markdownFile: result,
-                formattedDate: date.format('MMMM DD, YYYY')
+                formattedDate: date.format('MMMM D, YYYY')
             });
         } else {
             next();

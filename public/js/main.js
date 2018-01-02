@@ -36,7 +36,7 @@ $.when(
       url: item.uriPath,
       title: item.meta.title,
       description: item.meta.description,
-      date: date.format('MMMM DD, YYYY'),
+      date: date.format('MMMM D, YYYY'),
       year: date.year(),
       image: item.meta.image || null
     };
