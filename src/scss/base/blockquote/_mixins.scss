@@ -1,3 +1,25 @@
+$base--blockquote-quote-height: 8rem;
+$base--blockquote--quote-color: color('gray', 20);
+$base--blockquote--open-quote-top: -2.5rem;
+$base--blockquote--open-quote-left: -2.7rem;
+$base--blockquote--close-quote-bottom: -5.8rem;
+$base--blockquote--close-quote-right: -.6rem;
+
+@mixin base--blockquote-quote($is-open: true) {
+  @if $is-open {
+    content: '“';
+  }
+  @else {
+    content: '”';
+  }
+  color: color('gray', 20);
+  height: $base--blockquote-quote-height;
+  font-size: $base--blockquote-quote-height;
+  font-family: get('calligraphic');
+  line-height: 1;
+  position: absolute;
+}
+
 @mixin base--blockquote {
   font-style: italic;
   color: color('gray', 70);
@@ -6,4 +28,17 @@
   padding: 1rem;
   border-left: 3px solid color('yellow', 10);
   background-color: get('white 2');
+  position: relative;
+
+  &::before {
+    @include base--blockquote-quote(true);
+    top: $base--blockquote--open-quote-top;
+    left: $base--blockquote--open-quote-left;
+  }
+
+  &::after {
+    @include base--blockquote-quote(false);
+    bottom: $base--blockquote--close-quote-bottom;
+    right: $base--blockquote--close-quote-right;
+  }
 }

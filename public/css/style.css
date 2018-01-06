@@ -726,7 +726,28 @@ blockquote, .base--blockquote {
   margin-right: 0;
   padding: 1rem;
   border-left: 3px solid #EDD167;
-  background-color: #F4F4F4; }
+  background-color: #F4F4F4;
+  position: relative; }
+  blockquote::before, .base--blockquote::before {
+    content: '“';
+    color: #7F8C8D;
+    height: 8rem;
+    font-size: 8rem;
+    font-family: "selima";
+    line-height: 1;
+    position: absolute;
+    top: -2.5rem;
+    left: -2.7rem; }
+  blockquote::after, .base--blockquote::after {
+    content: '”';
+    color: #7F8C8D;
+    height: 8rem;
+    font-size: 8rem;
+    font-family: "selima";
+    line-height: 1;
+    position: absolute;
+    bottom: -5.8rem;
+    right: -0.6rem; }
 
 table,
 .base--table {
