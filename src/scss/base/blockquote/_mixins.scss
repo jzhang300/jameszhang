@@ -1,8 +1,9 @@
 @mixin base--blockquote {
-  padding: 0em 1.5em;
-  margin-right: 1em;
-  margin-left: 1em;
   font-style: italic;
   color: color('gray', 70);
-  border-left: .25em solid get('secondary accent color');
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
+  border-left: 3px solid color('yellow', 10);
+  background-color: get('white 2');
 }

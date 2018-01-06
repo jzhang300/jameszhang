@@ -720,12 +720,13 @@ ol ol,
   .base--ol .base--ol > .base--li:before {
     content: counter(table-ol, lower-alpha) "."; }
 
-.base--blockquote {
-  padding: 0em 1.5em;
-  margin-right: 1em;
-  margin-left: 1em;
+blockquote, .base--blockquote {
   font-style: italic;
-  border-left: 0.25em solid; }
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
+  border-left: 3px solid #EDD167;
+  background-color: #F4F4F4; }
 
 table,
 .base--table {
