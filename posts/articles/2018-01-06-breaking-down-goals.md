@@ -2,9 +2,9 @@ title: Breaking Down my New Year Resolutions
 description: This year I will challenge myself further with these goals...
 view: article
 date: 2018-01-06
-image: /images/articles/2018-01-01-new-years-resolution/dog.jpg
-image_source: https://dribbble.com/shots/4048537-2018
-image_author: Nick Kumbari
+image: /images/articles/2018-01-06-breaking-down-goals/circles.jpg
+image_source: https://dribbble.com/shots/2192063-Dots-Dynamic-Scale
+image_author: Adam Grabowski
 ---
 
 In the beginning of the 2018 year, I declared [my New Year Resolutions](http://www.jameszhang.io/articles/2018-01-01-new-years-resolution)
@@ -57,9 +57,9 @@ down by year, month, and day:
 
 ## Closing thoughts
 
-Individually, none of my goals are difficult.  The real challenge will be how
+Individually, none of my goals are difficult.  The challenge will be how
 effectively I can manage my time.  I feel my goals are reasonably challenging overall and
-do not detract from their intentions.  To re-emphasize, the purpose of my 2018 goals is not to
+do not detract from their original intentions.  To re-emphasize, the purpose of my 2018 goals is not to
 overwhelm myself, but to push my baselines.
 
 Now that I have measured my goals I can start planning for the first milestone.
