@@ -30,7 +30,7 @@ Now that the overarching goals are established, my game plan is pretty straightf
 
 ## Measuring my goals
 
-To better understand the implications of these goals, I will attempt at breaking them
+To better understand the implications of these goals, I will break them
 down by year, month, and day:
 
 | Goal | Amount in a year | Amount by month | Amount by day |
