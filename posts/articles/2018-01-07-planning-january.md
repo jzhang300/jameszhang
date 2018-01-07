@@ -4,7 +4,7 @@ view: article
 date: 2018-01-07
 image: /images/articles/2018-01-07-planning-january/january.jpg
 image_source: https://dribbble.com/shots/2452856-January
-image_author: Adam Grabowski
+image_author: Sarah Estelle Barrow
 ---
 
 In my previous post about [breaking down my goals](http://www.jameszhang.io/articles/2018-01-06-breaking-down-goals), I measured how much time each goal is going to take.
