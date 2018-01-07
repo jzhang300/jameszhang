@@ -1,5 +1,6 @@
 title: Breaking Down my New Year Resolutions
-description: This year I will challenge myself further with these goals...
+description: To better understand the implications of these goals, I will break them
+down by year, month, and day...
 view: article
 date: 2018-01-06
 image: /images/articles/2018-01-06-breaking-down-goals/circles.jpg
