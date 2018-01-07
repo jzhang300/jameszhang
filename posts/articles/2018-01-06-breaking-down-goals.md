@@ -34,7 +34,7 @@ To better understand the implications of these goals, I will break them
 down by year, month, and day:
 
 | Goal | Amount in a year | Amount by month | Amount by day |
-| ------------- | -------------: | -------------:| -----:|
+| ------------- |:-------------: |:-------------:|:-----:|
 | Running | **400 miles** | ~33.3 miles per month | ~1.1 miles per day |
 | Side Projects | **3** | 1 every 4 months | - |
 | Visual Design Course | **1** | 2 months | 2 hours per day during the course |
