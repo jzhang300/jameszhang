@@ -989,6 +989,15 @@ tr,
   .color-tile--details {
     margin-top: 0rem; }
 
+.text--red {
+  color: #FF585C; }
+
+.text--green {
+  color: #27AE60; }
+
+.text--green-2 {
+  color: #1e8449; }
+
 /*
 Atom One Dark by Daniel Gamage
 Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax

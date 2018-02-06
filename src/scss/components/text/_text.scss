@@ -1,0 +1,11 @@
+.text {
+  &--red {
+    color: get("red");
+  }
+  &--green {
+    color: color("green", 20);
+  }
+  &--green-2 {
+    color: darken(color("green", 20), 10%);
+  }
+}
