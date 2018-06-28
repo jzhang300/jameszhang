@@ -12,7 +12,11 @@
     "type": "git",
     "url": "https://github.com/lyphtec/markdown-serve-examples.git"
   },
-  "keywords": ["markdown-serve", "markdown", "Express"],
+  "keywords": [
+    "markdown-serve",
+    "markdown",
+    "Express"
+  ],
   "author": "James Zhang <james.zhang75024@gmail.com>",
   "license": "MIT",
   "dependencies": {
